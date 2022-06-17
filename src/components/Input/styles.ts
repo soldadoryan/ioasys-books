@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from 'styled-components'
 
 export const Container = styled.div`
     ${({ theme }) => css`
@@ -10,14 +10,14 @@ export const Container = styled.div`
         align-items: center;
         padding: 0 10px;
     `}
-`;
+`
 
 export const WrapInput = styled.div`
     display: flex;
     flex-direction: column;
     flex: 1;    
     gap: 4px;
-`;
+`
 
 export const Label = styled.label`
     ${({ theme }) => css`
@@ -27,7 +27,7 @@ export const Label = styled.label`
         font-weight: ${theme.typography.weights.regular};
         cursor: pointer;
     `}
-`;
+`
 
 export const Input = styled.input`
     ${({ theme }) => css`
@@ -38,7 +38,7 @@ export const Input = styled.input`
         background-color: transparent;
         border:0;
     `}
-`;
+`
 
 export const WrapButton = styled.div`
     width: auto;
@@ -46,4 +46,4 @@ export const WrapButton = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-`;
+`

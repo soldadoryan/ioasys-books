@@ -1,8 +1,13 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from 'styled-components'
 
-export const Container = styled.button`
-  ${({ theme }) => css`
+type ContainerProps = {
+  gridArea: string;
+}
+
+export const Container = styled.button<ContainerProps>`
+  ${({ theme, gridArea }) => css`
         background-color: transparent;
+        grid-area: ${gridArea};
         width: 32px;
         height: 32px;
         border: 1px solid ${theme.colors.borders.opacityDark};
@@ -10,7 +15,6 @@ export const Container = styled.button`
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-left: 8px; 
         color: ${theme.colors.texts.primary};
 
         &:disabled {
@@ -18,4 +22,4 @@ export const Container = styled.button`
             cursor: no-drop;
         }
     `}
-`;
+`

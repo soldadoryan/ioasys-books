@@ -1,32 +1,32 @@
-import { useCallback } from "react";
+import { useCallback } from 'react'
 
 const useLocalStorage = () => {
-    const setSession = useCallback((dados: {}, collection: string) => {
-        localStorage.setItem(collection, JSON.stringify(dados!));
-    }, [])
+  const setSession = useCallback((dados: any, collection: string) => {
+    localStorage.setItem(collection, JSON.stringify(dados!))
+  }, [])
 
-    const getSessionItem = useCallback((dado: string, collection: string) => {
-        const dados = JSON.parse(localStorage.getItem(collection)!);
+  const getSessionItem = useCallback((dado: string, collection: string) => {
+    const dados = JSON.parse(localStorage.getItem(collection)!)
 
-        return (dados) ? dados[dado] : 'Sessão não gravada!';
-    }, [])
+    return (dados) ? dados[dado] : 'Sessão não gravada!'
+  }, [])
 
-    const getSession = useCallback((collection: string) => {
-        const dados = JSON.parse(localStorage.getItem(collection)!);
+  const getSession = useCallback((collection: string) => {
+    const dados = JSON.parse(localStorage.getItem(collection)!)
 
-        return (dados) ? dados : null;
-    }, [])
+    return (dados) || null
+  }, [])
 
-    const clearSession = useCallback(() => {
-        localStorage.clear();
-    }, [])
+  const clearSession = useCallback(() => {
+    localStorage.clear()
+  }, [])
 
-    return {
-        setSession,
-        getSessionItem,
-        getSession,
-        clearSession,
-    };
-};
+  return {
+    setSession,
+    getSessionItem,
+    getSession,
+    clearSession,
+  }
+}
 
-export default useLocalStorage;
+export default useLocalStorage

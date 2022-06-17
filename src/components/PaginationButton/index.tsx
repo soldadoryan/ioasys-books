@@ -1,16 +1,17 @@
-import React, { ButtonHTMLAttributes } from 'react';
-import * as S from './styles';
+import React, { ButtonHTMLAttributes } from 'react'
+import * as S from './styles'
 
 interface PaginationButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-    icon: React.ReactNode
+  icon: React.ReactNode;
+  gridArea: string;
 }
 
-const PaginationButton = ({ icon, ...rest }: PaginationButtonProps) => {
-    return (
-        <S.Container {...rest}>
-            {icon}
-        </S.Container>
-    );
+function PaginationButton({ icon, gridArea, ...rest }: PaginationButtonProps) {
+  return (
+    <S.Container {...rest} gridArea={gridArea}>
+      {icon}
+    </S.Container>
+  )
 }
 
-export default PaginationButton;
+export default PaginationButton

@@ -1,16 +1,16 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from 'styled-components'
 
 export const Container = styled.div`
     display: flex;
     align-items: center;
-`;
+`
 
 export const Image = styled.img`
     margin-right: 16px;
-`;
+`
 
 type TitleProps = {
-    layout: 'dark' | 'light';
+  layout: 'dark' | 'light';
 }
 
 export const Title = styled.div<TitleProps>`
@@ -24,4 +24,4 @@ export const Title = styled.div<TitleProps>`
         font-weight: ${theme.typography.weights.light};
         font-size: ${theme.typography.sizes.xl};
     `}
-`;
+`

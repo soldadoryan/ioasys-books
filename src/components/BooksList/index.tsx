@@ -27,13 +27,14 @@ function BooksList() {
   return (
     <>
       <S.Container>
-        {books.data
-          && books.data?.map((book) => <BookItem key={book.id} book={book} />)}
+        {books.data && books.data?.map((book) => (
+          <BookItem key={book.id} book={book} />
+        ))}
       </S.Container>
       <S.WrapPagination>
         <Pagination
           page={currentPage}
-          total={Math.round(books.totalPages) ?? 0}
+          total={Math.round(books.totalPages ?? 0)}
           setCurrentPage={setCurrentPage}
           loading={loading}
         />

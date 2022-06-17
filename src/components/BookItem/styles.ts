@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from 'styled-components'
 
 export const Container = styled.div`
     ${({ theme }) => css`
@@ -15,21 +15,21 @@ export const Container = styled.div`
             height: auto;
         }
     `}
-`;
+`
 
 export const ImageBook = styled.img`
     width: 80px;
     margin-right: 16px;
-`;
+`
 
 export const BookInfo = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-`;
+`
 
-export const BookHeaderInfo = styled.div``;
+export const BookHeaderInfo = styled.div``
 
 export const BookTitle = styled.div`
     ${({ theme }) => css`
@@ -37,7 +37,7 @@ export const BookTitle = styled.div`
         font-size: ${theme.typography.sizes.md};
         font-weight: ${theme.typography.weights.medium};
     `}
-`;
+`
 
 export const BookAuthor = styled.div`
     ${({ theme }) => css`
@@ -45,11 +45,11 @@ export const BookAuthor = styled.div`
         font-size: ${theme.typography.sizes.sm};
         font-weight: ${theme.typography.weights.regular};
     `}
-`;
+`
 export const BookDescription = styled.div`
     ${({ theme }) => css`
         color: ${theme.colors.texts.mutedPrimary};
         font-size: ${theme.typography.sizes.sm};
         font-weight: ${theme.typography.weights.regular};
     `}
-`;
+`

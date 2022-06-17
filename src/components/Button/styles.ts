@@ -1,10 +1,6 @@
-import styled, { css } from 'styled-components';
-import { darken } from 'polished';
-import * as GS from '../../styles/global';
-
-type ButtonProps = {
-    disabled: boolean
-}
+import styled, { css } from 'styled-components'
+import { darken } from 'polished'
+import * as GS from '../../styles/global'
 
 export const Container = styled.button`
     ${({ theme, disabled }) => css`
@@ -24,11 +20,11 @@ export const Container = styled.button`
         ${disabled && css`cursor: not-allowed;`}
 
         &:hover {
-            background-color: ${darken(.1, theme.colors.background.secondary)};
+            background-color: ${darken(0.1, theme.colors.background.secondary)};
         }
     `}
-`;
+`
 
 export const Loading = styled(GS.Loading)`
     font-size: 25px;
-`;
+`

@@ -1,15 +1,15 @@
-import React, { ButtonHTMLAttributes } from 'react';
-import * as S from './styles';
-import { MdLogout } from 'react-icons/md';
+import { ButtonHTMLAttributes } from 'react'
+import { MdLogout } from 'react-icons/md'
+import * as S from './styles'
 
-interface LogoutButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> { }
+type LogoutButtonProps = ButtonHTMLAttributes<HTMLButtonElement>
 
-const LogoutButton = ({ ...rest }: LogoutButtonProps) => {
-    return (
-        <S.Container {...rest}>
-            <MdLogout />
-        </S.Container>
-    );
+function LogoutButton({ ...rest }: LogoutButtonProps) {
+  return (
+    <S.Container {...rest}>
+      <MdLogout />
+    </S.Container>
+  )
 }
 
-export default LogoutButton;
+export default LogoutButton

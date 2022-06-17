@@ -1,10 +1,10 @@
 type UserDTO = {
-    id: string;
-    name: string;
-    email: string;
-    birthdate: string;
-    gender: string;
-    token: string;
+  id: string;
+  name: string;
+  email: string;
+  birthdate: string;
+  gender: string;
+  token: string;
 }
 
-export default UserDTO;
+export default UserDTO

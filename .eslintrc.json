@@ -25,10 +25,29 @@
   ],
   "rules": {
     "global-require": "off",
+    "react/jsx-no-constructed-context-values": "warn",
+    "consistent-return": "warn",
+    "@typescript-eslint/no-empty-interface": "warn",
+    "no-console": [
+      "error",
+      {
+        "allow": [
+          "warn",
+          "error"
+        ]
+      }
+    ],
+    "react/jsx-no-useless-fragment": [
+      "warn",
+      {
+        "allowExpressions": true
+      }
+    ],
     "import/extensions": [
       "error",
       "never"
     ],
+    "import/prefer-default-export": "off",
     "no-unused-expressions": [
       "error",
       {
@@ -62,19 +81,18 @@
     "max-len": [
       "error",
       {
-        "template": 120,
-        "code": 80
+        "code": 120
       }
     ],
     "react/require-default-props": "off",
     "semi": [
       "error",
       "never"
+    ],
+    "react/jsx-props-no-spreading": [
+      "warn"
     ]
   },
-  "react/jsx-props-no-spreading": [
-    "warn"
-  ],
   "settings": {
     "import/resolver": {
       "node": {

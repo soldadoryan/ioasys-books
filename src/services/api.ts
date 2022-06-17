@@ -1,5 +1,5 @@
-import axios from 'axios';
+import axios from 'axios'
 
 export default axios.create({
-    baseURL: 'https://books.ioasys.com.br/api/v1',
-});
+  baseURL: 'https://books.ioasys.com.br/api/v1',
+})

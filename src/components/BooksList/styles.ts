@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const Container = styled.div`
     width: 100%;
@@ -15,11 +15,15 @@ export const Container = styled.div`
     @media screen and (max-width: 478px) {
         grid-template-columns: 1fr;
     }
-`;
+`
 
 export const WrapPagination = styled.div`
     width: 100%;
     display: flex;
     justify-content: flex-end;
-    margin: 16px 0 20px;
-`;
+    margin-top: 16px;
+
+    @media screen and (max-width: 425px) {
+      justify-content: center;
+    }
+`

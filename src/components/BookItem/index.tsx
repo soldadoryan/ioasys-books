@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { BookContext } from '../../contexts/BookContext'
 import { BookType } from '../../dtos/BooksDTO'
 import * as S from './styles'
 
@@ -7,15 +8,23 @@ type BookItemType = {
 }
 
 function BookItem({ book }: BookItemType) {
-  const getAuthors = () => book.authors.map((author) => <S.BookAuthor key={author}>{author}</S.BookAuthor>)
+  const { setBook } = useContext(BookContext)
+
+  const formatAuthors = () => book.authors.map((author) => (
+    <S.BookAuthor
+      key={author}
+    >
+      {author}
+    </S.BookAuthor>
+  ))
 
   return (
-    <S.Container>
+    <S.Container onClick={() => setBook(book)}>
       <S.ImageBook src={book.imageUrl} />
       <S.BookInfo>
         <S.BookHeaderInfo>
           <S.BookTitle>{book.title}</S.BookTitle>
-          <S.BookAuthor>{getAuthors()}</S.BookAuthor>
+          <S.BookAuthor>{formatAuthors()}</S.BookAuthor>
         </S.BookHeaderInfo>
         <S.BookDescription>
           {book.pageCount}
@@ -36,4 +45,4 @@ function BookItem({ book }: BookItemType) {
   )
 }
 
-export default BookItem
+export default React.memo(BookItem)

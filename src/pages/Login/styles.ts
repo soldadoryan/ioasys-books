@@ -1,6 +1,6 @@
-import styled from 'styled-components';
-import * as GS from '../../styles/global';
-import Background from '../../assets/background.png';
+import styled from 'styled-components'
+import * as GS from '../../styles/global'
+import Background from '../../assets/background.png'
 
 export const Container = styled.section`
     background-image: url(${Background});
@@ -11,7 +11,7 @@ export const Container = styled.section`
     height: 100vh;
     display: flex;
     justify-content: center;
-`;
+`
 
 export const Wrap = styled(GS.Container)`
     height: 100vh;
@@ -21,7 +21,7 @@ export const Wrap = styled(GS.Container)`
         justify-content: center;
         
     }
-`;
+`
 
 export const Form = styled.form`
     width: clamp(200px, 100%, 370px);
@@ -32,8 +32,8 @@ export const Form = styled.form`
     @media screen and (max-width: 370px) {
         padding: 10px;
     }
-`;
+`
 
 export const WrapLogo = styled.div`
     margin-bottom: 48px;
-`;
+`
