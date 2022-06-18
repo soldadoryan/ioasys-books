@@ -10,7 +10,7 @@ type BookItemType = {
 function BookItem({ book }: BookItemType) {
   const { setBook } = useContext(BookContext)
 
-  const formatAuthors = () => book.authors.map((author) => (
+  const formatAuthors = () => book?.authors.map((author) => (
     <S.BookAuthor
       key={author}
     >

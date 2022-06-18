@@ -40,11 +40,12 @@ function Login() {
   return (
     <S.Container>
       <S.Wrap>
-        <S.Form onSubmit={onSubmit}>
+        <S.Form data-testid="form-login" onSubmit={onSubmit}>
           <S.WrapLogo>
             <Logo layout="light" />
           </S.WrapLogo>
           <Input
+            data-testid="input-email"
             name="email"
             id="input_email"
             label="E-mail"
@@ -52,6 +53,7 @@ function Login() {
             control={control}
           />
           <Input
+            data-testid="input-password"
             name="password"
             id="input_password"
             label="Password"
